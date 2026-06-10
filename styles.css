@@ -160,6 +160,8 @@ h1, h2, h3 { font-family: var(--font-display); }
 
 /* ── Device showcase ────────────────────────────────────────── */
 .showcase { position: relative; z-index: 1; margin-top: 64px; display: flex; justify-content: center; }
+/* Box hugs the phone's width so the float cards anchor to the phone, not the page edges */
+.showcase-inner { position: relative; width: max-content; }
 .phone {
   position: relative; width: 300px; height: 612px; flex-shrink: 0;
   background: #0E0E15; border-radius: 46px; padding: 11px;
@@ -203,8 +205,8 @@ h1, h2, h3 { font-family: var(--font-display); }
 .float-card .fc-ic { width: 34px; height: 34px; border-radius: 10px; background: var(--grad-accent); display: grid; place-items: center; color: #fff; box-shadow: var(--glow-accent); }
 .float-card .fc-t { font-size: 12.5px; font-weight: 600; color: #fff; }
 .float-card .fc-s { font-size: 11px; color: var(--text-soft); }
-.fc-a { top: 92px; left: -2px; animation: floatB 7s var(--ease-in-out) infinite; }
-.fc-b { bottom: 96px; right: -6px; animation: floatB 7s var(--ease-in-out) infinite 1.4s; }
+.fc-a { top: 124px; left: -132px; animation: floatB 7s var(--ease-in-out) infinite; }
+.fc-b { bottom: 140px; right: -132px; animation: floatB 7s var(--ease-in-out) infinite 1.4s; }
 @keyframes floatB { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
 
 /* ── Value strip ────────────────────────────────────────────── */
